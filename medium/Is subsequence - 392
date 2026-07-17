@@ -18,14 +18,14 @@ Output: false
 
 
 
-class Solutiion:
-    def isSubsequence(self,sub,main):
-        int i = 0
-        int j = 0
-        
-        while ( ( i > len(sub) ) and ( j > len(main) ) ):
-            if(sub[i] == main[j]):
+class Solution:
+    def isSubsequence(self, sub, main):
+        i = 0
+        j = 0
+
+        while i < len(sub) and j < len(main):
+            if sub[i] == main[j]:
                 i += 1
             j += 1
-        
-        return (i == len(sub))
+
+        return i == len(sub)
